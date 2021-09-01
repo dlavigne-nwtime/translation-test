@@ -20,9 +20,9 @@ enableRobotsTXT = true
   preloader = "" # use .png , .svg or .gif format
 
 # Language settings
-contentDir = "content/en"
+contentDir = "content/"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -49,6 +49,276 @@ description = "NTP Documentation Archive"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
+[[languages.en.menu.main]]
+    name = "Reference Library"
+    url = "/reflib"
+    weight = 20
+    hasChildren = true
+	  [[languages.en.menu.main]] 
+	  parent = "Reference Library"
+	  name = "Briefs"
+	  URL = "/reflib/brief"
+	  weight = 1
+	  [[languages.en.menu.main]] 
+	  parent = "Reference Library"
+	  name = "Memos"
+	  URL = "/reflib/memos"
+	  weight = 2
+	  [[languages.en.menu.main]] 
+	  parent = "Reference Library"
+	  name = "Reports"
+	  URL = "/reflib/reports"
+	  weight = 3
+	  [[languages.en.menu.main]] 
+	  parent = "Reference Library"
+	  name = "RFCs"
+	  URL = "/reflib/rfc"
+	  weight = 4
+	  [[languages.en.menu.main]] 
+	  parent = "Reference Library"
+	  name = "Software"
+	  URL = "/reflib/software"
+	  weight = 5
+	  [[languages.en.menu.main]] 
+	  parent = "Reference Library"
+	  name = "White Papers"
+	  URL = "/reflib/papers"
+	  weight = 6
+
+[[languages.en.menu.main]]
+    name = "Docs"
+    url = "/archives"
+    weight = 30
+    hasChildren = true
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "4.2.8-series"
+	  URL = "/archives/4.2.8-series/toc"
+	  weight = 1
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "4.2.6-series"
+	  URL = "/archives/4.2.6-series/toc"
+	  weight = 2
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "4.2.4-series"
+	  URL = "/archives/4.2.4-series/toc"
+	  weight = 3
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "4.2.2-series"
+	  URL = "/archives/4.2.2-series/toc"
+	  weight = 4
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "4.2.0"
+	  URL = "/archives/4.2.0/toc"
+	  weight = 5
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "4.1.2"
+	  URL = "/archives/4.1.2/toc"
+	  weight = 6
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "4.1.1"
+	  URL = "/archives/4.1.1/toc"
+	  weight = 7
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "4.1.0"
+	  URL = "/archives/4.1.0/toc"
+	  weight = 8
+	  [[languages.en.menu.main]] 
+	  parent = "Docs"
+	  name = "3-5.93e"
+	  URL = "/archives/3-5.93e/toc"
+	  weight = 9
+
+[languages.de]
+languageName ="Deutsch"
+contentDir = "content/de"
+weight = 2
+[[languages.de.menu]]
+[[languages.de.menu.main]]
+    name = "Präsenzbibliothek"
+    url = "/reflib"
+    weight = 20
+    hasChildren = true
+	  [[languages.de.menu.main]] 
+	  parent = "Präsenzbibliothek"
+	  name = "Auftrage"
+	  URL = "/reflib/brief"
+	  weight = 1
+	  [[languages.de.menu.main]] 
+	  parent = "Präsenzbibliothek"
+	  name = "Memos"
+	  URL = "/reflib/memos"
+	  weight = 2
+	  [[languages.de.menu.main]] 
+	  parent = "Präsenzbibliothek"
+	  name = "Berichte "
+	  URL = "/reflib/reports"
+	  weight = 3
+	  [[languages.de.menu.main]] 
+	  parent = "Präsenzbibliothek"
+	  name = "RFCs"
+	  URL = "/reflib/rfc"
+	  weight = 4
+	  [[languages.de.menu.main]] 
+	  parent = "Präsenzbibliothek"
+	  name = "Software"
+	  URL = "/reflib/software"
+	  weight = 5
+	  [[languages.de.menu.main]] 
+	  parent = "Präsenzbibliothek"
+	  name = "Weiße Papiere"
+	  URL = "/reflib/papers"
+	  weight = 6
+
+[[languages.de.menu.main]]
+    name = "Dokumente"
+    url = "/archives"
+    weight = 30
+    hasChildren = true
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "4.2.8-serie"
+	  URL = "/archives/4.2.8-series/toc"
+	  weight = 1
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "4.2.6-serie"
+	  URL = "/archives/4.2.6-series/toc"
+	  weight = 2
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "4.2.4-serie"
+	  URL = "/archives/4.2.4-series/toc"
+	  weight = 3
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "4.2.2-series"
+	  URL = "/archives/4.2.2-series/toc"
+	  weight = 4
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "4.2.0"
+	  URL = "/archives/4.2.0/toc"
+	  weight = 5
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "4.1.2"
+	  URL = "/archives/4.1.2/toc"
+	  weight = 6
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "4.1.1"
+	  URL = "/archives/4.1.1/toc"
+	  weight = 7
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "4.1.0"
+	  URL = "/archives/4.1.0/toc"
+	  weight = 8
+	  [[languages.de.menu.main]] 
+	  parent = "Dokumente"
+	  name = "3-5.93e"
+	  URL = "/archives/3-5.93e/toc"
+	  weight = 9
+
+[languages.ja]
+languageName ="日本"
+contentDir = "content/ja"
+weight = 3
+[[languages.ja.menu]]
+[[languages.ja.menu.main]]
+    name = "リファレンスライブラリ "
+    url = "/reflib"
+    weight = 20
+    hasChildren = true
+	  [[languages.ja.menu.main]] 
+	  parent = "リファレンスライブラリ "
+	  name = "梗概"
+	  URL = "/reflib/brief"
+	  weight = 1
+	  [[languages.ja.menu.main]] 
+	  parent = "リファレンスライブラリ "
+	  name = "メモ"
+	  URL = "/reflib/memos"
+	  weight = 2
+	  [[languages.ja.menu.main]] 
+	  parent = "リファレンスライブラリ "
+	  name = "レポート "
+	  URL = "/reflib/reports"
+	  weight = 3
+	  [[languages.ja.menu.main]] 
+	  parent = "リファレンスライブラリ "
+	  name = "RFCs"
+	  URL = "/reflib/rfc"
+	  weight = 4
+	  [[languages.ja.menu.main]] 
+	  parent = "リファレンスライブラリ "
+	  name = "ソフトウェア"
+	  URL = "/reflib/software"
+	  weight = 5
+	  [[languages.ja.menu.main]] 
+	  parent = "リファレンスライブラリ "
+	  name = "白い紙"
+	  URL = "/reflib/papers"
+	  weight = 6
+
+[[languages.ja.menu.main]]
+    name = "ドキュメント "
+    url = "/archives"
+    weight = 30
+    hasChildren = true
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "4.2.8-シリーズ"
+	  URL = "/archives/4.2.8-series/toc"
+	  weight = 1
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "4.2.6-シリーズ"
+	  URL = "/archives/4.2.6-series/toc"
+	  weight = 2
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "4.2.4-シリーズ"
+	  URL = "/archives/4.2.4-series/toc"
+	  weight = 3
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "4.2.2-シリーズ"
+	  URL = "/archives/4.2.2-series/toc"
+	  weight = 4
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "4.2.0"
+	  URL = "/archives/4.2.0/toc"
+	  weight = 5
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "4.1.2"
+	  URL = "/archives/4.1.2/toc"
+	  weight = 6
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "4.1.1"
+	  URL = "/archives/4.1.1/toc"
+	  weight = 7
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "4.1.0"
+	  URL = "/archives/4.1.0/toc"
+	  weight = 8
+	  [[languages.ja.menu.main]] 
+	  parent = "ドキュメント"
+	  name = "3-5.93e"
+	  URL = "/archives/3-5.93e/toc"
+	  weight = 9
 
 [markup]
   [markup.goldmark]
@@ -62,99 +332,8 @@ weight = 1
 
 [params]
 copyright = "Network Time Foundation"
-logo = "icons/ntp_logo.jpg"
-
-[[menu.main]]
-    name = "Network Time Foundation"
-    weight = 10
-    url = "https://www.nwtime.org"
-
-[[menu.main]]
-    name = "Reference Library"
-    url = "/reflib"
-    weight = 20
-    hasChildren = true
-	  [[menu.main]] 
-	  parent = "Reference Library"
-	  name = "Briefs"
-	  URL = "/reflib/brief"
-	  weight = 1
-	  [[menu.main]] 
-	  parent = "Reference Library"
-	  name = "Memos"
-	  URL = "/reflib/memos"
-	  weight = 2
-	  	  [[menu.main]] 
-	  parent = "Reference Library"
-	  name = "Reports"
-	  URL = "/reflib/reports"
-	  weight = 3
-	  [[menu.main]] 
-	  parent = "Reference Library"
-	  name = "RFCs"
-	  URL = "/reflib/rfc"
-	  weight = 4
-	  [[menu.main]] 
-	  parent = "Reference Library"
-	  name = "Software"
-	  URL = "/reflib/software"
-	  weight = 5
-	  [[menu.main]] 
-	  parent = "Reference Library"
-	  name = "White Papers"
-	  URL = "/reflib/papers"
-	  weight = 6
-
-[[menu.main]]
-    name = "Docs"
-    url = "/archives"
-    weight = 30
-    hasChildren = true
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "4.2.8-series"
-	  URL = "/archives/4.2.8-series/toc"
-	  weight = 1
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "4.2.6-series"
-	  URL = "/archives/4.2.6-series/toc"
-	  weight = 2
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "4.2.4-series"
-	  URL = "/archives/4.2.4-series/toc"
-	  weight = 3
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "4.2.2-series"
-	  URL = "/archives/4.2.2-series/toc"
-	  weight = 4
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "4.2.0"
-	  URL = "/archives/4.2.0/toc"
-	  weight = 5
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "4.1.2"
-	  URL = "/archives/4.1.2/toc"
-	  weight = 6
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "4.1.1"
-	  URL = "/archives/4.1.1/toc"
-	  weight = 7
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "4.1.0"
-	  URL = "/archives/4.1.0/toc"
-	  weight = 8
-	  [[menu.main]] 
-	  parent = "Docs"
-	  name = "3-5.93e"
-	  URL = "/archives/3-5.93e/toc"
-	  weight = 9
+logo1 = "images/ntp_logo.jpg"
+logo2 = "images/logo.png"
 
 github_repo = "https://github.com/ntp-project/ntp"
 prism_syntax_highlighting = false

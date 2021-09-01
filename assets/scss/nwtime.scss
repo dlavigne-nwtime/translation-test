@@ -60,6 +60,7 @@
 	- Primary Navigation
 	- Secondary Navigation
 	- Menu Toggle
+	- Translation Toggle
 - Content Areas
 	- Entries
 	- Entry Meta
@@ -971,52 +972,19 @@ img.alignright,
 =            Navigation            =
 ==================================*/
 
-.genesis-nav-menu {
-	clear: both;
-	line-height: 1;
-}
-
-.genesis-nav-menu .menu-item {
-	display: block;
-	position: relative;
-	text-align: right;
-}
-
-.genesis-nav-menu a {
-	border-bottom: 1px solid #ddd;
-	color: #1a79c0;
-	display: block;
-	padding: 20px 10px;
-	text-align: left;
-	text-decoration: none;
-}
-
-.genesis-nav-menu .menu-item.menu-item-has-children > a {
-	padding-right: 50px;
-}
-
-.genesis-nav-menu > .menu-item > a {
-	padding: 20px;
-}
-
-/* Sub Menu */
-
-.genesis-nav-menu .sub-menu {
-	display: none;
-}
-
-.genesis-nav-menu .sub-menu a {
-	font-size: .8em;
-	padding-left: 40px;
-	word-wrap: break-word;
-}
-
-.genesis-nav-menu .sub-menu .sub-menu a {
-	padding-left: 60px;
-}
 .nav-bar {
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 900;
+}
+
+.nav-link {
+    text-decoration: none;
+	font-size: 16px !important;
+}
+
+.dropdown-item {
+    text-decoration: none; 
+	font-size: 16px;
 }
 
 .header-border {
@@ -1024,44 +992,9 @@ img.alignright,
     border-color: #94c5ea;
     border-top-width: 0px;
     border-right-width: 0px;
-    border-bottom-width: 8px;
+    border-bottom-width: 6px;
     border-left-width: 0px;
 }
-
-/*----------  Primary Navigation  ----------*/
-
-.nav-primary,
-.nav-primary .genesis-nav-menu {
-	width: 100%;
-}
-
-.nav-primary {
-	background: #fff;
-	border-bottom: 1px solid #ddd;
-	display: none;
-	height: 100%;
-	overflow-y: scroll;
-	padding-top: 65px;
-	position: fixed;
-	top: 0;
-	z-index: 99;
-}
-
-.admin-bar .nav-primary {
-	padding-top: 111px;
-}
-
-/*----------  Secondary Navigation  ----------*/
-
-.nav-secondary {
-	background: #3bcacd;
-	border-bottom: 1px solid #ddd;
-	font-size: .8em;
-	font-weight: bold;
-	display: none;
-	text-transform: uppercase;
-}
-
 
 /*----------  Menu Toggle  ----------*/
 
@@ -1074,7 +1007,7 @@ img.alignright,
 	font-weight: bold;
 	padding: 0;
 	text-align: right;
-	text-transform: none;
+	text-transform: none;     
 }
 
 .menu-toggle:focus,
@@ -1107,6 +1040,15 @@ img.alignright,
 
 .sub-menu-toggle.activated {
 	transform: rotate(180deg);
+}
+
+/*----------  Translation Toggle  ----------*/
+
+.translation {
+display: block;
+  height: 20px;
+  width: 35px;
+  border: none;
 }
 
 /*=====================================

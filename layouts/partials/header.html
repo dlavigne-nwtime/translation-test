@@ -1,49 +1,59 @@
-{{ "<!-- navigation -->" | safeHTML }}
-    
-<!-- use bootstrap icons -->
+{{ "<!-- Configure Top Navigation Bar -->" | safeHTML }}
+
+<!-- use bootstrap icons for social media icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 <header class="sticky-top navigation">
   <div class="container">
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light py-0">
-		<div class="d-flex align-items-center" style="height:100px; width:100px;">
-		 <a class="navbar-brand py-0" href="{{ site.BaseURL }}"><img class="img-fluid" src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}"></a> 
-      </div>
-	  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
-        <i class="bi-plus"></i>
-      </button>
 
+<!-- Add NTP and nwtime logos to left. Constrain header height with icon height. -->
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+	  <div class="d-flex align-items-center" style="height:80px; width:80px;">
+		 <a class="navbar-brand py-0" href="{{ site.BaseURL }}"><img class="img-fluid" src="{{ site.Params.logo1 | absURL }}" alt="{{ site.Title }}"></a> 
+      </div>	  
+	  <div class="d-flex align-items-center" style="height:80px; width:80px;">
+		 <a class="py-0" href="https://www.nwtime.org"><img class="img-fluid" src="{{ site.Params.logo2 | absURL }}" alt=""></a> 
+      </div>
+
+<!-- Configure Menu/Sub-Menu -->	  
       <div class="collapse navbar-collapse text-center" id="navigation">
         <ul class="navbar-nav ml-auto py-0">
           <li class="nav-item py-0">
-            <a class="nav-link py-0" style="text-decoration: none; font-size: 16px; font-family: 'Nunito Sans', sans-serif;" href="{{ site.BaseURL }}">{{ with site.Params.Home }} {{ . }} {{ end }}</a>
-          </li>
-          {{ range site.Menus.main }}
-          {{ if .HasChildren }}
-          <li class="nav-item dropdown py-0">
-            <a class="nav-link dropdown-toggle py-0" style="text-decoration: none; font-size: 16px; font-family: 'Nunito Sans', sans-serif;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+<!-- Support Multilingual Menu/Sub-Menu -->
+        {{- $currentPage := . -}}
+        {{ range .Site.Menus.main -}}
+          <a class="nav-link py-0{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{ .URL | absLangURL }}"></a>
+	      </li>	
+        {{ if .HasChildren }}
+          <li class="nav-item dropdown py-0 ">
+            <a class="nav-link dropdown-toggle py-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ .Name }}
             </a>
-            <div class="dropdown-menu">
-              {{ range .Children }}
-              <a class="dropdown-item" style="text-decoration: none; font-size: 16px; font-family: 'Nunito Sans', sans-serif;" href="{{ .URL | absURL }}">{{ .Name }}</a>
-              {{ end }}
+      <div class="dropdown-menu">
+        {{ range .Children }}
+            <a class="dropdown-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+        {{ end }}
             </div>
           </li>
-          {{ else }}
+        {{ else }}
           <li class="nav-item py-0">
-            <a class="nav-link py-0" style="text-decoration: none; font-size: 16px; font-family: 'Nunito Sans', sans-serif;" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            <a class="nav-link py-0" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
           </li>
-          {{ end }}
-          {{ end }}
+        {{ end }}
+		{{- end }}
         </ul>
-{{/* Insert search button here once search works
-<form class="form-inline my-2 my-lg-0">
-<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
-*/}}
+
+<!-- Add Language Selector -->
+	  <div>
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		  <li class="btn-group btn-group-sm" role="group">
+            <a href="/" class="btn btn-primary translation active" role="button"data-bs-toggle="button" autocomplete="off">EN</a>
+            <a href="/de" class="btn translation btn-warning" role="button" data-bs-toggle="button" autocomplete="off">DE</a>
+            <a href="/ja" class="btn translation btn-danger" role="button" data-bs-toggle="button" autocomplete="off">JA</a>
+          </li>
+		</ul>
       </div>
     </nav>
   </div>
