@@ -15,14 +15,12 @@
 		 <a class="py-0" href="https://www.nwtime.org"><img class="img-fluid" src="{{ site.Params.logo2 | absURL }}" alt=""></a> 
       </div>
 
-<!-- Configure Menu/Sub-Menu -->	  
+ 	<!-- Support Multilingual Menu/Sub-Menu -->
       <div class="collapse navbar-collapse text-center" id="navigation">
         <ul class="navbar-nav ml-auto py-0">
-          <li class="nav-item py-0">
-
-<!-- Support Multilingual Menu/Sub-Menu -->
         {{- $currentPage := . -}}
-        {{ range .Site.Menus.main -}}
+        {{ range .Site.Menus.main -}} 
+          <li class="nav-item py-0">
           <a class="nav-link py-0{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
             <a href="{{ .URL | absLangURL }}"></a>
 	      </li>	

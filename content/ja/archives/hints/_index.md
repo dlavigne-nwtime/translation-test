@@ -1,4 +1,0 @@
----
-title: "Hints"
-type: archives
----
