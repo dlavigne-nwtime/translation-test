@@ -423,7 +423,10 @@ thead {
 // Code formatting.
 
 code {
- color: #6c757d !important;
+   color: #404040 !important;
+   font-family: monospace;
+   font-size: 16px;
+   font-weight: 400;
 }
 
 .td-content {
@@ -980,6 +983,17 @@ img.alignright,
 .nav-link {
     text-decoration: none;
 	font-size: 16px !important;
+}
+
+.navbar-text {
+    list-style-type: none;
+}
+
+/*----------  Use in header for projects without a logo image  ----------*/
+.text-logo {
+    text-decoration: none;
+	font-size: 20px !important;
+	color: rgb(26, 121, 192) !important;
 }
 
 .dropdown-item {

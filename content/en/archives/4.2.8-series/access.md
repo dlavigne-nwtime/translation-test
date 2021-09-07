@@ -15,9 +15,9 @@ The <tt>ntpd</tt> daemon implements a general purpose access control list (ACL) 
 
 The ACL is specified as a list of <tt>restrict</tt> commands in the following format:
 
-<tt>restrict _address_ [mask _mask_] [_flag_][...]</tt>
+<code>restrict _address_ [mask _mask_] [_flag_][...]</code>
 
-The <tt>_address_</tt> argument expressed in dotted-quad form is the address of a host or network. Alternatively, the <tt>_address_</tt> argument can be a valid host DNS name. The <tt>_mask_</tt> argument expressed in IPv4 or IPv6 numeric address form defaults to all mask bits on, meaning that the <tt>_address_</tt> is treated as the address of an individual host. A default entry (address 0.0.0.0, mask 0.0.0.0 for IPv4 and address :: mask :: for IPv6) is always the first entry in the list. <tt>restrict default</tt>, with no mask option, modifies both IPv4 and IPv6 default entries. <tt>restrict source</tt> configures a template restriction automatically added at runtime for each association, whether configured, ephemeral, or preemptable, and removed when the association is demobilized.
+The <code>_address_</code> argument expressed in dotted-quad form is the address of a host or network. Alternatively, the <tt>_address_</tt> argument can be a valid host DNS name. The <tt>_mask_</tt> argument expressed in IPv4 or IPv6 numeric address form defaults to all mask bits on, meaning that the <tt>_address_</tt> is treated as the address of an individual host. A default entry (address 0.0.0.0, mask 0.0.0.0 for IPv4 and address :: mask :: for IPv6) is always the first entry in the list. <tt>restrict default</tt>, with no mask option, modifies both IPv4 and IPv6 default entries. <tt>restrict source</tt> configures a template restriction automatically added at runtime for each association, whether configured, ephemeral, or preemptable, and removed when the association is demobilized.
 
 Some flags have the effect to deny service, some have the effect to enable service and some are conditioned by other flags. The flags are not orthogonal, in that more restrictive flags will often make less restrictive ones redundant. The flags that deny service are classed in two categories, those that restrict time service and those that restrict informational queries and attempts to do run-time reconfiguration of the server.
 
